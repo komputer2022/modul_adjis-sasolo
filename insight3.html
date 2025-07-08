@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Data</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        
+
+    </head>
+
+    <script>
+        function toggleDescription() {
+            const moreDescription = document.getElementById("moreDescription");
+            const deskripsiSection = document.getElementById("deskripsiSection");
+    
+            // Tampilkan deskripsi bawah jika disembunyikan
+            if (moreDescription.style.display === "none") {
+                moreDescription.style.display = "block";
+            }
+    
+            if (deskripsiSection.style.display === "none") {
+                deskripsiSection.style.display = "block";
+    
+                // Scroll ke section deskripsi dengan efek smooth
+                setTimeout(() => {
+                    deskripsiSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, 300); // delay biar section sempat muncul dulu sebelum scroll
+            }
+        }
+    </script>
+    
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+           
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid py-5 hero-header wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-7 col-md-12">
+                        <h1 class="mb-3 text-primary">Modul pembelajaran</h1>
+                        <h1 class="mb-5 display-1 text-white">Mari belajar bertahap</h1>
+                        <a href="#about" class="btn btn-primary px-4 py-3 px-md-5 me-4 btn-border-radius">Get Started</a>
+                        <a href="https://drive.google.com/file/d/1qYgYRr-31WiofBAcG50JnsCVXVVp6vsI/view?usp=drive_link" class="btn btn-primary px-4 py-3 px-md-5 me-4 btn-border-radius" target="_blank">PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- About Start -->
+        <div id="about" class="container-fluid py-5 about bg-light">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="video border">
+                            <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/Yl9BH-XyLlA"
+                            data-bs-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                        <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Insight #3</h4>
+                        <h1 class="text-dark mb-4 display-5">Bagaimana caranya 'berbicara' dengan database?</h1>
+                        <p class="text-dark mb-4">Sama seperti manusia butuh bahasa untuk saling berkomunikasi, komputer dan sistem basis data pun membutuhkan bahasa agar bisa memahami perintah dari pengguna. Bahasa yang digunakan untuk berbicara dengan database ini dikenal dengan nama SQL.
+                        </p>
+                        <div class="row mb-4">
+                        </div>
+                        <a href="javascript:void(0);" onclick="toggleDescription()" class="btn btn-primary px-5 py-3 btn-border-radius">Baca lebih lanjut</a>
+                        <div id="moreDescription" class="mt-4" style="display: none;">
+                        </div>                        
+                        <a href="insight4.html" class="btn btn-primary px-5 py-3 btn-border-radius">Lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section deskripsi -->
+
+        <style>
+            .section-deskripsi {
+              background-color: #f8f9fa;
+              padding: 60px 0;
+            }
+        
+            .deskripsi-image img {
+              max-width: 100%;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+              transition: transform 0.3s ease;
+            }
+        
+            .deskripsi-image img:hover {
+              transform: scale(1.03);
+            }
+        
+            .btn-learn {
+              margin-top: 25px;
+              transition: all 0.3s ease;
+            }
+        
+            .btn-learn:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+            }
+          </style>
+        </head>
+        <body>
+          <section class="section-deskripsi" id="deskripsiSection" style="display: none;">
+            <div class="container">
+              <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                  <h2 class="fw-bold text-dark">Konsep relasional</h2>
+                  <p class="text-muted">
+                    Konsep relasional merupakan dasar dari sistem basis data modern yang digunakan secara luas hingga hari ini. Dalam pendekatan relasional, data disimpan dalam bentuk tabel yang terdiri dari baris dan kolom. Setiap tabel mewakili satu entitas, misalnya tabel Mahasiswa untuk menyimpan informasi mahasiswa, tabel Mata Kuliah untuk data mata kuliah, dan seterusnya. Tabel-tabel ini tidak berdiri sendiri, melainkan dapat saling berhubungan melalui atribut kunci seperti primary key dan foreign key, sehingga menciptakan sistem data yang saling terintegrasi dan mudah ditelusuri.
+
+Struktur ini memudahkan kita dalam memahami dan mengelola informasi karena setiap bagian data memiliki tempatnya masing-masing dan dapat ditelusuri dengan logika yang jelas. Misalnya, saat ingin mengetahui mahasiswa mana saja yang mengambil mata kuliah tertentu, sistem basis data dapat dengan mudah menghubungkan dua tabel yang relevan dan menampilkan jawabannya secara otomatis.
+
+Relasi antar data ini juga memungkinkan penghindaran duplikasi, menjaga konsistensi, dan mempermudah pembaruan informasi. Misalnya, jika ada perubahan nama pada satu entitas, kita tidak perlu mengedit banyak tempat sekaligus, cukup satu bagian saja dan seluruh data yang terhubung ikut diperbarui. Konsep ini dikenal sebagai normalisasi, yang tujuannya adalah menjaga efisiensi dan keakuratan data.
+
+Dengan memahami bagaimana struktur relasional bekerja, kita dapat membangun sistem informasi yang lebih andal, terukur, dan siap menghadapi pertumbuhan data yang semakin besar. Inilah fondasi penting yang harus dipahami oleh siapa saja yang ingin mendalami dunia basis data.
+
+
+                  </p>
+                </div>
+              </div>
+        
+              <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                 
+        
+                  <div class="deskripsi-image mt-4">
+                    <img src="img/d3.jpeg" alt="Ilustrasi Presentasi" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+        
+        
+        <!-- Modal Video -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+       <!-- Copyright Start -->
+       <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-light"><a href="https://fauzywarow.github.io/Modul/"><i class="fas fa-copyright text-light me-2"></i>Modul</a>, Pembelajaran.</span>
+                </div>
+                <div class="col-md-6 my-auto text-center text-md-end text-white">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Tanyakan sesuatu<a class="border-bottom" href="https://docs.google.com/forms/d/e/1FAIpQLSe63rpjn2W5puUlTfeFBO937OjjVjBeWgfnquRMTu04_H_DYQ/viewform?usp=dialog">?</a> Atau kendala teknis, <a class="border-bottom" href="https://wa.me/6281234567890" target="_blank">helpdesksupport</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
